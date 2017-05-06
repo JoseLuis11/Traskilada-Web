@@ -21,7 +21,6 @@
     <link href="signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,52 +31,78 @@
   </head>
 
   <body>
-
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Project name</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+			  <ul class="nav navbar-nav">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</nav>
     <div class="container">
 
       <form class="form-horizontal">
       <fieldset>
-      <h2 class="form-signin-heading">Enter workplace info</h2>
+	  <h2 class="form-signin-heading">Enter workplace info</h2>
 
-      <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="WorkplaceIDinput">Workplace ID</label>  
-        <div class="col-md-4">
-        <input id="WorkplaceIDinput" name="WorkplaceIDinput" type="text" placeholder="ID" class="form-control input-md">
-        <span class="help-block"></span>  
-        </div>
+          <label for="text">Workplace name:</label>
+          <div class = "input-group">
+            <input type="text" class="form-control" id="WorkplaceNameinput" placeholder="Name" size="40">
+          </div>
       </div>
 
-      <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="WorkplaceNameinput">Workplace name</label>  
-        <div class="col-md-4">
-        <input id="WorkplaceNameinput" name="WorkplaceNameinput" type="text" placeholder="Name" class="form-control input-md">
-        <span class="help-block"></span>  
-        </div>
+          <label for="text">Workplace address:</label>
+          <div class = "input-group">
+            <input type="text" class="form-control" id="WorkplaceAddressinput" placeholder="Address" size="40">
+          </div>
       </div>
 
-      <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="WorkplaceAddressinput">Workplace address</label>  
-        <div class="col-md-4">
-        <input id="WorkplaceAddressinput" name="WorkplaceAddressinput" type="text" placeholder="Address" class="form-control input-md">
-        <span class="help-block"></span>  
-        </div>
+          <label for="text">Workplace email</label>
+          <div class = "input-group">
+            <input type="text" class="form-control" id="WorkplacEmailinput" placeholder="Email" size="40">
+          </div>
       </div>
 
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="WorkplaceEmailinput">Workplace email</label>  
-        <div class="col-md-4">
-        <input id="WorkplaceEmailinput" name="WorkplacEmailinput" type="text" placeholder="Email" class="form-control input-md">
-        <span class="help-block"></span> 
-
+      <div>
         <p class="lead">
-          <a href="register_employee.html" class="btn btn-lg btn-primary">Sign up workplace</a>
+			<a href="#" class="btn btn-lg btn-primary">Sign up workplace</a>
+			<a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Add another workplace</a>
+			<!-- Modal HTML -->
+			<div id="myModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Confirmation</h4>
+						</div>
+						<div class="modal-body">
+							<p>Do you want to save changes you made to document before closing?</p>
+							<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
         </p>
-        </div>
-      </div>     
+      </div>
       
       </fieldset>
       </form>
@@ -86,5 +111,6 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	
   </body>
 </html>
