@@ -7,7 +7,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!-- Modal stuff-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" href="assets/img/favicon.ico">
+    <!-- modal stuff end-->
 
     <title>Register employee</title>
 
@@ -29,6 +37,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
   </head>
   <div id = "fixed-menu">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -99,8 +108,59 @@
       <div>
         <p class="lead">
           <a href="register_employee.html" class="btn btn-lg btn-primary">Sign up employee</a>
-		      <a class="btn btn-lg btn-primary">Add another employee</a>
+          <a href="" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Add another employee</a>
         </p>
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <div class="form-group">
+                    <label for="text">Employee name:</label>
+                    <div class = "input-group">
+                      <input type="text" class="form-control" id="EmployeeNameinput" placeholder="Name" size="40">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Employee last name:</label>
+                    <div class = "input-group">
+                      <input type="text" class="form-control" id="EmployeeLastNameinput" placeholder="LastName" size="40">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Employee phone number:</label>
+                    <div class = "input-group">
+                      <input type="text" class="form-control" id="EmployeePhoneNumberinput" placeholder="Phone number" size="40">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Employee email:</label>
+                    <div class = "input-group">
+                      <input type="text" class="form-control" id="EmployeeEmailinput" placeholder="Email" size="40">
+                    </div>
+                </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
       </div>
       
 

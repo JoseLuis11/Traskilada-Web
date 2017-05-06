@@ -1,7 +1,23 @@
 body {
-  padding-top: 40px;
+  padding-top: 70px;
   padding-bottom: 40px;
   background-color: #eee;
+  min-height: 2000px;
+}
+
+#fixed-menu
+{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: #f00;
+    padding: 100px;
+}
+
+.spacer
+{
+    width: 100%;
+    height: 130px;
 }
 
 .form-horizontal {
