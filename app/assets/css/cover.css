@@ -19,7 +19,6 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -27,12 +26,13 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: url('../assets/img/cover_logo.png');
+  background-image: url('../img/cover_logo.png');
+  background-size: cover;
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 3px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
