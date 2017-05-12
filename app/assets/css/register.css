@@ -6,6 +6,11 @@ body {
   padding-bottom: 20px;
 }
 
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -35,7 +40,7 @@ body {
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
+  #container-navbar {
     max-width: 730px;
   }
 }
