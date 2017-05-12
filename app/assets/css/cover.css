@@ -13,10 +13,13 @@ a:hover {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: '200';
+  color: #fff;
+  /*text-shadow: none;  Prevent inheritance from `body` */
+  background-color: #229694;
+  border: 0px solid #fff;
+  width: 50%;
 }
 
 /*
@@ -27,8 +30,9 @@ html,
 body {
   height: 100%;
   background-color: #222222;
-  /*background-image: url('../img/cover_logo.png');*/
   background-size: cover;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Comfortaa', cursive;
 }
 body {
   color: #fff;
