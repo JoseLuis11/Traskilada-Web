@@ -26,7 +26,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: url('../img/cover_logo.png');
+  background-color: #222222;
+  /*background-image: url('../img/cover_logo.png');*/
   background-size: cover;
 }
 body {
