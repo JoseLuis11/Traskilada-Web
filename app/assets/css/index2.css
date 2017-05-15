@@ -17,6 +17,10 @@ html {
 body {
     margin: 0
 }
+
+#showcase{
+    margin-top:50px;
+}
 article,
 aside,
 details,
