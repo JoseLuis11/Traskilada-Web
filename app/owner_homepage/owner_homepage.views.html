@@ -20,10 +20,9 @@ body {font-size:16px;}
   <div class="w3-container">
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../login_owner/login_owner2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+  <div class="w3-bar-block"> 
+    <a href="#employees" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Empleados</a>
+    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
 
@@ -44,56 +43,49 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
 
-<hr>
-  <div class="w3-container">
-      <h1 class="w3-xlarge w3-text-teal"><b>Empleados.</b></h1>
-      <ul class="w3-ul w3-card-4 w3-white">
-          <li class="w3-padding-16">
-              <img src="../assets/img/users-1.svg" class="w3-left w3-circle w3-margin-right" style="width:35px">
-              <span class="w3-xlarge">Mike</span>
-              <br>
-          </li>
-          <li class="w3-padding-16">
-              <img src="../assets/img/users-7.svg" class="w3-left w3-circle w3-margin-right" style="width:35px">
-              <span class="w3-xlarge">Jill</span>
-              <br>
-          </li>
-          <li class="w3-padding-16">
-              <img src="../assets/img/users-9.svg" class="w3-left w3-circle w3-margin-right" style="width:35px">
-              <span class="w3-xlarge">Jane</span>
-              <br>
-          </li>
-      </ul>
-  </div>
-<hr>
-
 <div class="w3-container">
     <hr>
-    <h1 class="w3-xlarge w3-text-teal"><b>Empleados.</b></h1>
+    <h1 class="w3-xxlarge w3-text-teal" id="employees"><b>Empleados.</b></h1>
     <div class="w3-responsive w3-card-4">
         <table class="w3-table w3-striped w3-bordered">
             <thead>
                 <tr class="w3-theme">
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Points</th>
+                    <th>Foto</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                </tr>
-                <tr class="w3-white">
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
+                    <td><img src="../assets/img/users-1.svg" style="width:70px"></td>
+                    <td>9495</td>
+                    <td>Luis</td>
+                    <td>Pérez</td>
                 </tr>
                 <tr>
-                    <td>Adam</td>
-                    <td>Johnson</td>
-                    <td>67</td>
+                    <td><img src="../assets/img/users-3.svg" style="width:70px"></td>
+                    <td>9496</td>
+                    <td>María</td>
+                    <td>Aparicio</td>
+                </tr>
+                <tr>
+                    <td><img src="../assets/img/users-6.svg" style="width:70px"></td>
+                    <td>9497</td>
+                    <td>Juan</td>
+                    <td>Martínez</td>
+                </tr>
+                <tr>
+                    <td><img src="../assets/img/users-7.svg" style="width:70px"></td>
+                    <td>9498</td>
+                    <td>Jorge</td>
+                    <td>Gutiérrez</td>
+                </tr>
+                <tr>
+                    <td><img src="../assets/img/users-16.svg" style="width:70px"></td>
+                    <td>9499</td>
+                    <td>Luisa</td>
+                    <td>Gonzáles</td>
                 </tr>
             </tbody>
         </table>
