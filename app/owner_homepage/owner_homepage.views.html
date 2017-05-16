@@ -24,9 +24,10 @@ body {font-size:16px;}
   <div class="w3-bar-block"> 
     <a href="#employees" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Empleados</a>
     <a href="#workplaces" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Negocios</a>
+    <a href="#appointments" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Citas</a>
     <a href="../register_employee/register_employee2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar empleados</a>
     <a href="../register_workplace/register_workplace2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar negocio</a>
-    <a action="../includes/logout_owner.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
+    <a action="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
 
@@ -95,33 +96,66 @@ body {font-size:16px;}
             </tbody>
         </table>
     </div>
+</div>
 
 <!-- Workplaces -->
     <div class="w3-container">
     <hr>
     <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
-    <div class="w3-responsive w3-card-4">
-        <table class="w3-table w3-striped w3-bordered">
-            <thead>
-                <tr class="w3-theme">
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1568</td>
-                    <td>Peluquería "Tunéame La Greña"</td>
-                    <td>Blvd. Reforma #800, Bugambilias, 22768</td>
-                </tr>
-                <tr>
-                    <td>5674</td>
-                    <td>Peluquería "Tunéame La Greña: Traskilada"</td>
-                    <td>Paseo Eucaliptos #504, local 5, Plaza Amanecer, 24500</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="w3-responsive w3-card-4">
+            <table class="w3-table w3-striped w3-bordered">
+                <thead>
+                    <tr class="w3-theme">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1568</td>
+                        <td>Peluquería "Tunéame La Greña"</td>
+                        <td>Blvd. Reforma #800, Bugambilias, 22768</td>
+                    </tr>
+                    <tr>
+                        <td>5674</td>
+                        <td>Peluquería "Tunéame La Greña: Traskilada"</td>
+                        <td>Paseo Eucaliptos #504, local 5, Plaza Amanecer, 24500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="w3-container">
+    <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="appointment"><b>Citas agendadas.</b></h1>
+        <div class="w3-responsive w3-card-4">
+            <table class="w3-table w3-striped w3-bordered">
+                <thead>
+                    <tr class="w3-theme">
+                        <th>Hora</th>
+                        <th>Fecha</th>
+                        <th>Nombre</th>
+                        <th>Servicios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:00 am</td>
+                        <td>16/05/17</td>
+                        <td>Peluquería "Tunéame La Greña"</td>
+                        <td>Corte, afeitada</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 pm</td>
+                        <td>19/05/17</td>
+                        <td>Peluquería "Traskilada"</td>
+                        <td>Recorte de barba</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 <!-- End page content -->
