@@ -34,13 +34,15 @@ if ($result->num_rows > 0) {
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
     
-    echo "Bienvenido! ";
-    echo "<br><br><a href=panel-control.php>Panel de Control</a>"; 
+    header('Location: ../owner_homepage/owner_homepage.views.html')
     
     } else { 
-    echo "Username o Password estan incorrectos.";
-    
-    echo "<br><a href='login.html'>Volver a Intentarlo</a>";
+    ?>
+   <script languaje="javascript">
+    alert("Contraseña o Email Incorrecto");
+    location.href = "../login_owner/login_owner2.views.html";
+   </script>
+    <?php
     }
     mysql_free_result($result);
     mysqli_close($conexion);
