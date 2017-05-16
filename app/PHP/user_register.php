@@ -15,8 +15,10 @@ $formPass = $_POST['Password'];
 $formPass2 = $_POST['Password2'];
 $formLoginType = $_POST['logintype'];
 
-
-$mysqli = new mysqli($host_db,$user_db,$pass_db,$db_name);
+if($formPass != $formPass2){
+    header('Location: ../register_owner/wrongpassword.html');
+}else{
+    $mysqli = new mysqli($host_db,$user_db,$pass_db,$db_name);
 
 if($mysqli->connect_error){
     die("La conexion fallo: " . $mysqli->connect_error);
@@ -26,7 +28,15 @@ else{
 }
 
 
-$result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) VALUES ('$formName','$formLastName','$formPhone') ");
+$result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) 
+VALUES ('$formName','$formLastName','$formPhone') ");
+
+if($formLoginType=="user"){
+    $formLoginTypeInt=1;
+}else{
+    $formLoginTypeInt=2;
+}
+
 
 $res = $mysqli->affected_rows;
 
@@ -35,9 +45,18 @@ if($res!=1){
 }
 else{
     echo "Fue insertado un dato";
-    $fila= $result->fetch_assoc();
+    //$fila= $result->fetch_assoc();
 }
 
 
+$userId= $mysqli->insert_id;
+$result = $mysqli->query("INSERT INTO Accounts (Email, LoginType, Password, UserId) 
+VALUES ('$formEmail',$formLoginTypeInt,'$formPass', $userId) ");
+
+mysqli_close($mysqli);
+
+header('Location: ../register_owner/registration_confirmed.views.html');
+
+}
 
 ?>
