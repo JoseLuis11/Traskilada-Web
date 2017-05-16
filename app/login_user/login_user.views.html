@@ -23,6 +23,7 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
     <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>
 
@@ -43,33 +44,20 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
 
-  <!-- Register owner -->
-  <div class="w3-container" id="register">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Registro.</b></h1>
-    <p>Ingresa tu información para registrarte.</p>
-    <form action="../login_owner/login_owner2.views.html" target="_self">
-      <div class="w3-section">
-        <label>Nombre</label>
-        <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa tu nombre" required>
-      </div>
-      <div class="w3-section">
-        <label>Apellidos</label>
-        <input class="w3-input w3-border" type="text" name="LastName" placeholder="Ingresa tus apellidos" required>
-      </div>
-      <div class="w3-section">
-        <label>Teléfono</label>
-        <input class="w3-input w3-border" type="text" name="Phone" placeholder="Ingresa tu número de teléfono" required>
-      </div>
+  <!-- Login owner -->
+  <div class="w3-container" id="login">
+    <h1 class="w3-xxlarge w3-text-teal"><b>Inicio de sesión.</b></h1>
+    <form action="../owner_homepage/owner_homepage.views.html" target="_self">
       <div class="w3-section">
         <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="text" name="Email" placeholder="Ingresa tu dirección de correo electrónico" required>
+        <input class="w3-input w3-border" type="email" name="Email" placeholder="Ingresa tu dirección de correo electrónico" required>
       </div>
       <div class="w3-section">
         <label>Contraseña</label>
         <input class="w3-input w3-border" type="password" name="Password" placeholder="Ingresa tu contraseña" required>
       </div>
       <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
-    </form>  
+    </form>
   </div>
 
 <!-- End page content -->
