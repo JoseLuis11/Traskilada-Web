@@ -49,7 +49,7 @@ body {font-size:16px;}
   <div class="w3-container" id="register">
     <h1 class="w3-xxlarge w3-text-teal"><b>Registro de empleados.</b></h1>
     <p>Ingresa la información de tus empleados para registrarlos.</p>
-    <form action="../owner_homepage/owner_homepage.views.html" target="_self">
+    <form action="../includes/employee_register.php" method="post" target="_self">
       <div class="w3-section">
         <label>Nombre</label>
         <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa tu nombre" required>
@@ -66,7 +66,7 @@ body {font-size:16px;}
         <label>Correo electrónico</label>
         <input class="w3-input w3-border" type="email" name="Email" placeholder="Ingresa tu dirección de correo electrónico" required>
       </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Registrar</button>
     </form>  
   </div>
 
