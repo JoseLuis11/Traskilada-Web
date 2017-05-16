@@ -47,7 +47,7 @@ body {font-size:16px;}
   <div class="w3-container" id="register">
     <h1 class="w3-xxlarge w3-text-teal"><b>Registro.</b></h1>
     <p>Ingresa tu información para registrarte.</p>
-    <form action="../login_owner/login_owner2.views.html" target="_self">
+    <form action="../PHP/user_register.php" method= "post" target="_self">
       <div class="w3-section">
         <label>Nombre</label>
         <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa tu nombre" required>
@@ -70,7 +70,7 @@ body {font-size:16px;}
       </div>
       <div class="w3-section">
         <label>Repite contraseña</label>
-        <input class="w3-input w3-border" type="password" name="Password" placeholder="Ingresa tu contraseña otra vez" required>
+        <input class="w3-input w3-border" type="password" name="Password2" placeholder="Ingresa tu contraseña otra vez" required>
       </div>
       <div class="w3-section">
         <input id="user" class="w3-radio" type="radio" name="logintype" value="user" checked>
