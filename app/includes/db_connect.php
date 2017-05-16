@@ -1,8 +1,9 @@
 <?php
-include_once 'psl-config.php';   // Ya que functions.php no está incluido.
-$host_db = "localhost";
-$user_db = "root";
-$pass_db = "expo2017";
-$db_name = "traskilada";
+define('db_server', 'localhost');
+define('db_name', 'traskilada');
+define('db_user', 'root');
+define('db_pass', 'expo2017');
 
-$mysqli = new mysqli($host_db,$user_db,$pass_db,$db_name);
+$mysqli= mysql_connect(db_server,db_user,db_pass);
+mysql_select_db(db_name, $mysqli);
+?>
