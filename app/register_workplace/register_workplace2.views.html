@@ -49,18 +49,14 @@ body {font-size:16px;}
   <div class="w3-container" id="register">
     <h1 class="w3-xxlarge w3-text-teal"><b>Registro de negocios.</b></h1>
     <p>Ingresa la información de tu negocio para registrarlo.</p>
-    <form action="../owner_homepage/owner_homepage.views.html" target="_self">
+    <form action="../includes/workplace_register.php" method="post" target="_self">
       <div class="w3-section">
         <label>Nombre</label>
         <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa el nombre del negocio" required>
       </div>
       <div class="w3-section">
-        <label>Apellidos</label>
+        <label>Dirección</label>
         <input class="w3-input w3-border" type="text" name="Address" placeholder="Ingresa la dirección" required>
-      </div>
-      <div class="w3-section">
-        <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="text" name="Email" placeholder="Ingresa la dirección de correo electrónico" required>
       </div>
       <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
     </form>  
