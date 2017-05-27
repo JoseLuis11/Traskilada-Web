@@ -7,9 +7,9 @@
                 </tr>
             </thead>
        <?php 
-            include("../includes/Cshow_employees.php");
+            include("Cshow_employees.php");
             
-            while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+            while($row=$result->fetch_array(MYSQLI_ASSOC)){
                 ?>
                 <tbody>
                 <tr>

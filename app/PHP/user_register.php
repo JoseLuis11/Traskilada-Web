@@ -10,6 +10,10 @@ $formPass = $_POST['Password'];
 $formPass2 = $_POST['Password2'];
 $formLoginType = $_POST['logintype'];
 
+if($formPass != $formPass2){
+    header('Location: ../register_owner/wrongpassword.html');
+}
+
 $result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) 
 VALUES ('$formName','$formLastName','$formPhone') ");
 

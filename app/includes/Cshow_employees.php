@@ -10,7 +10,7 @@ and a.UserId = u.Id
 order by u.Name, u.LastName;");
 
 
-$res = $mysqli->num_rows;
+/*$res = $mysqli->num_rows;
 
     if($res!=1){
             echo "No se ha insertado ningun dato";
@@ -19,6 +19,5 @@ $res = $mysqli->num_rows;
         echo "Fue insertado un dato";
         //$fila= $result->fetch_assoc();
     }
-
-}
+    */
 ?>
