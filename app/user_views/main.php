@@ -72,7 +72,7 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block"> 
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
+    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
 
@@ -104,8 +104,8 @@ body {font-size:16px;}
               <div id="myDropdown" class="dropdown-content">
                 <form>
                     <input type="text" placeholder="Buscar.." id="myInput" onkeyup="filterFunction()">
-                    <a href="../user_views/create_appointment.html">Peluquería Tunéame la Greña</a>
-                    <a href="../user_views/create_appointment.html">Peluquería Traskilada</a>
+                    <a href="../user_views/create_appointment.php">Peluquería Tunéame la Greña</a>
+                    <a href="../user_views/create_appointment.php">Peluquería Traskilada</a>
                 </form>
             </div>
         </div>

@@ -23,8 +23,8 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../login/login.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
-    <a href="../register_owner/register_owner2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Crear cuenta</a>
+    <a href="../login/login.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
+    <a href="../register_owner/register_owner2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Crear cuenta</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>

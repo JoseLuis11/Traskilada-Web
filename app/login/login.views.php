@@ -12,18 +12,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
-
-label > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
-}
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:2px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid teal;
-}
 </style>
 <body>
 
@@ -34,7 +22,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
+    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.php#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>
 
@@ -55,70 +44,22 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
 
-  <!-- Login owner -->
-  <div class="w3-container" id="login">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Fecha y hora.</b></h1>
-    <form action="" target="_self">
+  <!-- Choose login type -->
 
-      <div class="w3-section">
-          <form action="/action_page.php">
-            <label>Fecha y hora: </label>
-            <input type="datetime-local" name="datetime">
-          </form>
-      </div>
+  <div class="w3-container" id="logintype">
+    <p>Elije el tipo de usuario con el que quieres iniciar sesión.</p>
+    <form action="../login_user/login_user.views.php" target="_self">
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom w3-hover-black">Iniciar sesión como usuario</button>
     </form>
-  </div>
-
-  <!-- Choose employee -->
-  <div class="w3-container" id="login">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Barbero/Estilista.</b></h1>
-    <form action="../user_views/main.html" target="_self">
-
-      <div class="w3-section">
-          <form action="/action_page.php">
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-11.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-12.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-13.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-14.svg" style="width:20%">
-            </label>
-          </form>
-      </div>
+    <form action="../login_owner/login_owner2.views.php" target="_self">
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom w3-hover-black">Iniciar sesión como dueño</button>
     </form>
+    
+    
   </div>
 
-  <div class="w3-container">
-      <hr>
-      <h1 class="w3-xxlarge w3-text-teal" id="services"><b>Servicio.</b></h1>
-      <p>Elige los servicios que desees.</p>
-      <div class="w3-container">
-          <input id="corte" class="w3-check" type="checkbox" checked="checked">
-            <label>Corte</label>
-          <br>
-          <input id="tinte" class="w3-check" type="checkbox">
-          <label>Tinte</label>
-          <br>
-          <input id="manicure" class="w3-check" type="checkbox" disabled>
-        <label>Manicure</label>
-        <br><br>
-      </div> 
-  </div>
-  <div class= "w3-container">
-    <form action="../user_views/app_confirmed.html">
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Agendar</button>  
-    </form>
-  </div>
-  
+
+
 
 <!-- End page content -->
 </div>
