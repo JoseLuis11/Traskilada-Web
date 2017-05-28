@@ -1,7 +1,10 @@
 <?php
    session_start();
    
-   if(session_destroy()) {
-      header("location: ../login/login.views.php");
+    if(isset($_SESSION['Email'])){
+	    unset($_SESSION['Email']);
+}
+    session_destroy();
+    header("Location: ../login/login.views.php");
    }
 ?>
