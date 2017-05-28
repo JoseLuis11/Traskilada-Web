@@ -22,8 +22,8 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../index/index2.views.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.php#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>
 
@@ -49,7 +49,7 @@ body {font-size:16px;}
   <div class="w3-container" id="logintype">
     <h1 class="w3-xxlarge w3-text-teal"><b>No estas registrado.</b></h1>
     <p class="w3-large">Haz click en el botón para registrarte</p>
-    <form action="../login_user/login_user.views.html" target=No estas registrado."_self">
+    <form action="../login_user/login_user.views.php" target=No estas registrado."_self">
         <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom w3-hover-black">Regístrate</button>
     </form>
   </div>
