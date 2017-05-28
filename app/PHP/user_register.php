@@ -14,6 +14,15 @@ if($formPass != $formPass2){
     header('Location: ../register_owner/wrongpassword.html');
 }
 
+$result = $mysqli->query("SELECT Id FROM accounts WHERE Email = '$formEmail'");
+
+$count = mysqli_num_rows($result);
+
+if($count==1){
+    //TODO: página de usuario registrado anteriormente
+    echo "Email registrado anteriormente";
+}else{
+
 $result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) 
 VALUES ('$formName','$formLastName','$formPhone') ");
 
@@ -38,9 +47,10 @@ else{
 $userId= $mysqli->insert_id;
 $result = $mysqli->query("INSERT INTO Accounts (Email, LoginType, Password, UserId) 
 VALUES ('$formEmail',$formLoginTypeInt,'$formPass', $userId) ");
+header('Location: ../register_owner/registration_confirmed.views.php');
+}
 
 mysqli_close($mysqli);
 
-header('Location: ../register_owner/registration_confirmed.views.php');
 
 ?>
