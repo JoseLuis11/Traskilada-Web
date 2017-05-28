@@ -19,11 +19,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
          session_register("myemail");
          $_SESSION['user'] = $myemail;
          
-         header("location: main.php");
+         header("location: ../user_views/main.php");
       }else {
          $error = "Your Login Name or Password is invalid";
          //Agregar pagina que no estas registrado
-         header("location: user_login.php");
+         header("location: ../includes/user_login.php");
       }
    }
 ?>
