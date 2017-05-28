@@ -41,6 +41,6 @@ VALUES ('$formEmail',$formLoginTypeInt,'$formPass', $userId) ");
 
 mysqli_close($mysqli);
 
-header('Location: ../register_owner/registration_confirmed.views.html');
+header('Location: ../register_owner/registration_confirmed.views.php');
 
 ?>

@@ -59,63 +59,23 @@ body {font-size:16px;}
 
 <!-- Workplaces -->
     <div class="w3-container">
-    <hr>
-    <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
         <div class="w3-responsive w3-card-4">
-            <table class="w3-table w3-striped w3-bordered">
-                <thead>
-                    <tr class="w3-theme">
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Dirección</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1568</td>
-                        <td>Peluquería "Tunéame La Greña"</td>
-                        <td>Blvd. Reforma #800, Bugambilias, 22768</td>
-                    </tr>
-                    <tr>
-                        <td>5674</td>
-                        <td>Peluquería "Tunéame La Greña: Traskilada"</td>
-                        <td>Paseo Eucaliptos #504, local 5, Plaza Amanecer, 24500</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php include("../includes/show_workplaces.php");?>
         </div>
     </div>
 
+<!-- Appointments -->
+
     <div class="w3-container">
-    <hr>
-        <h1 class="w3-xxlarge w3-text-teal" id="appointment"><b>Citas agendadas.</b></h1>
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="appointments"><b>Citas agendadas.</b></h1>
         <div class="w3-responsive w3-card-4">
-            <table class="w3-table w3-striped w3-bordered">
-                <thead>
-                    <tr class="w3-theme">
-                        <th>Hora</th>
-                        <th>Fecha</th>
-                        <th>Nombre</th>
-                        <th>Servicios</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>10:00 am</td>
-                        <td>16/05/17</td>
-                        <td>Peluquería "Tunéame La Greña"</td>
-                        <td>Corte, afeitada</td>
-                    </tr>
-                    <tr>
-                        <td>1:00 pm</td>
-                        <td>19/05/17</td>
-                        <td>Peluquería "Traskilada"</td>
-                        <td>Recorte de barba</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php include("../includes/show_appointments.php");?>
         </div>
     </div>
+    
 
 <!-- End page content -->
 </div>

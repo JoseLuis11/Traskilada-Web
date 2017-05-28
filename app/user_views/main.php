@@ -106,8 +106,7 @@ body {font-size:16px;}
               <div id="myDropdown" class="dropdown-content">
                 <form>
                     <input type="text" placeholder="Buscar.." id="myInput" onkeyup="filterFunction()">
-                    <a href="../user_views/create_appointment.php">Peluquería Tunéame la Greña</a>
-                    <a href="../user_views/create_appointment.php">Peluquería Traskilada</a>
+                    <?php include("../includes/list_workplaces.php");?>
                 </form>
             </div>
         </div>
@@ -115,29 +114,11 @@ body {font-size:16px;}
 
 
     <div class="w3-container">
-    <hr>
-    <div class="w3-responsive w3-card-4">
-        <table class="w3-table w3-striped w3-bordered">
-            <thead>
-                <tr class="w3-theme">
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1568</td>
-                    <td>Peluquería "Tunéame La Greña"</td>
-                    <td>Blvd. Reforma #800, Bugambilias, 22768</td>
-                </tr>
-                <tr>
-                    <td>5674</td>
-                    <td>Peluquería "Tunéame La Greña: Traskilada"</td>
-                    <td>Paseo Eucaliptos #504, local 5, Plaza Amanecer, 24500</td>
-                </tr>
-            </tbody>
-        </table>
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
+        <div class="w3-responsive w3-card-4">
+            <?php include("../includes/show_workplaces.php");?>
+        </div>
     </div>
 
 <!-- End page content -->
