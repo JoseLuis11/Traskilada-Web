@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       }else {
          $error = "Your Login Name or Password is invalid";
          //Agregar pagina que no estas registrado
-         header("location: ../includes/user_login.php");
+         header("location: ../login_user/login_user.views.php");
       }
    }
 ?>
