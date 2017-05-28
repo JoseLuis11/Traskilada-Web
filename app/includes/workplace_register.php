@@ -30,7 +30,7 @@ if($res!=1){
 else{
     mysqli_close($mysqli);
 
-    header('Location: ../owner_homepage/owner_homepage.views.html');
+    header('Location: ../owner_homepage/owner_homepage.views.php');
     //$fila= $result->fetch_assoc();
 }
 ?>
