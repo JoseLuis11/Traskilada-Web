@@ -1,5 +1,5 @@
 <?php
-    include('session.php');
+    include('../includes/session.php');
 ?>
 <html>
 <title>SHORT+CUT</title>

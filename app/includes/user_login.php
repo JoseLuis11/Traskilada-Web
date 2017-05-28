@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       
       // If result matched $myusername and $mypassword, table row must be 1 row
       if($count == 1) {
-         $_SESSION['Email'] = $myemail;
+         $_SESSION['user'] = $myemail;
          
          header("location: ../user_views/main.php");
       }else {
