@@ -46,7 +46,6 @@ body {font-size:16px;}
   <div class="w3-container" id="showcase">
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
-
   <!-- Login owner -->
   <div class="w3-container" id="login">
     <h1 class="w3-xxlarge w3-text-teal"><b>Inicio de sesión.</b></h1>

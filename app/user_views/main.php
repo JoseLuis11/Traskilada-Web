@@ -1,3 +1,6 @@
+<?php
+    include('session.php');
+?>
 <html>
 <title>SHORT+CUT</title>
 <meta charset="UTF-8">
