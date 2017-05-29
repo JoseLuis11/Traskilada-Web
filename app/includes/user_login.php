@@ -7,10 +7,6 @@ if(!empty($_SESSION['Email'])) {
       exit;
 }
 
-echo "b";
-echo $_POST['Email'];
-echo $_POST['Password'];
-
 if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {     
       // username and password sent from form 
       $myemail = mysqli_real_escape_string($mysqli,$_POST['Email']);
