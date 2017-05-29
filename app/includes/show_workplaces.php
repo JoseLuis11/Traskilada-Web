@@ -13,9 +13,9 @@
                 ?>
                 <tbody>
                 <tr>
-                    <td><?php echo $row["Id"];?></td>
-                    <td><?php echo $row["Name"];?></td>
-                    <td><?php echo $row["Address"];?></td>
+                    <td><?php echo $row["id_W"];?></td>
+                    <td><?php echo $row["name_W"];?></td>
+                    <td><?php echo $row["address_W"];?></td>
                 </tr>
             </tbody>
        <?php     

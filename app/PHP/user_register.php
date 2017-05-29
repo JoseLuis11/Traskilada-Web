@@ -14,7 +14,7 @@ if($formPass != $formPass2){
     header('Location: ../register_owner/wrongpassword.html');
 }
 
-$result = $mysqli->query("SELECT Id FROM accounts WHERE Email = '$formEmail'");
+$result = $mysqli->query("SELECT id_U FROM User WHERE email_U = '$formEmail'");
 
 $count = mysqli_num_rows($result);
 
@@ -23,15 +23,13 @@ if($count==1){
     echo "Email registrado anteriormente";
 }else{
 
-$result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) 
-VALUES ('$formName','$formLastName','$formPhone') ");
-
 if($formLoginType=="user"){
-    $formLoginTypeInt=1;
+    $result = $mysqli->query("INSERT INTO User (name_U, lastName_U, phoneNumber_U, email_U, password_U) 
+    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formEmail'); ");
 }else{
-    $formLoginTypeInt=2;
+    $result = $mysqli->query("INSERT INTO Owner (name_O, lastName_O, phoneNumber_O, email_O, password_O) 
+    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formEmail'); ");
 }
-
 
 $res = $mysqli->affected_rows;
 
@@ -42,15 +40,8 @@ else{
     echo "Fue insertado un dato";
     //$fila= $result->fetch_assoc();
 }
-
-
-$userId= $mysqli->insert_id;
-$result = $mysqli->query("INSERT INTO Accounts (Email, LoginType, Password, UserId) 
-VALUES ('$formEmail',$formLoginTypeInt,'$formPass', $userId) ");
+mysqli_close($mysqli);
 header('Location: ../register_owner/registration_confirmed.views.php');
 }
-
-mysqli_close($mysqli);
-
 
 ?>

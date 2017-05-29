@@ -1,11 +1,6 @@
 <?php
 
-$host_db = "localhost";
-$user_db = "root";
-$pass_db = "expo2017";
-$db_name = "traskilada";
-$tbl_users = "Users";
-$tbl_accounts = "Accounts"; 
+include("../includes/db_connect.php");
 
 $formName = $_POST['Name'];
 $formAddress = $_POST['Address'];
@@ -19,8 +14,8 @@ else{
     echo "Conexion con exito";
 }
 
-$result = $mysqli->query("INSERT INTO Workplaces (Name, Address, OwnerUserId) 
-VALUES ('$formName','$formAddress',1) ");
+$result = $mysqli->query("INSERT INTO workplace (name_W, address_W) 
+VALUES ('$formName','$formAddress'); ");
 
 $res = $mysqli->affected_rows;
 

@@ -15,9 +15,11 @@
                 ?>
                 <tbody>
                 <tr>
-                    <td><?php echo $row["DateTime"];?></td>
-                    <td><?php echo $row["Name"];?></td>
-                    <td><?php echo $row["LastName"];?></td>
+                    <td><?php echo $row["Fecha y hora"];?></td>
+                    <td><?php echo $row["Local"];?></td>
+                    <td><?php echo $row["Cliente"];?></td>
+                    <td><?php echo $row["Empleado"];?></td>
+                    <td><?php echo $row["Servicios"];?></td>
                 </tr>
             </tbody>
        <?php     

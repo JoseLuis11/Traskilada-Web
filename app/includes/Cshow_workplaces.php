@@ -3,7 +3,7 @@ include("../includes/db_connect.php");
 
 
 
-$result = $mysqli->query("SELECT w.Id, w.Name, w.Address
-from workplaces w
-order by w.Name;");
+$result = $mysqli->query("SELECT id_W, name_W, address_W
+from workplace
+order by name_W, address_W;");
 ?>

@@ -4,6 +4,8 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>E-mail</th>
                 </tr>
             </thead>
        <?php 
@@ -13,9 +15,11 @@
                 ?>
                 <tbody>
                 <tr>
-                    <td><?php echo $row["Id"];?></td>
-                    <td><?php echo $row["Name"];?></td>
-                    <td><?php echo $row["LastName"];?></td>
+                    <td><?php echo $row["id_E"];?></td>
+                    <td><?php echo $row["name_E"];?></td>
+                    <td><?php echo $row["lastName_E"];?></td>
+                    <td><?php echo $row["phoneNumber_E"];?></td>
+                    <td><?php echo $row["email_E"];?></td>
                 </tr>
             </tbody>
        <?php     
