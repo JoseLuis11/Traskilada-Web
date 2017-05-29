@@ -1,3 +1,6 @@
+<?php
+  include("../includes/logout.php");
+?>
 <!DOCTYPE html>
 <html>
 <title>SHORT+CUT</title>
