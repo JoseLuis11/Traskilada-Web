@@ -6,7 +6,7 @@
 
         $user_check = $_SESSION['Email'];
         
-        $ses_sql = mysqli_query($mysqli,"SELECT Email FROM account WHERE Email = '$user_check' ");
+        $ses_sql = mysqli_query($mysqli,"SELECT email_U FROM User WHERE email_U = '$user_check' ");
         
         $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
         
