@@ -12,7 +12,7 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
       $myemail = mysqli_real_escape_string($mysqli,$_POST['Email']);
       $mypassword = mysqli_real_escape_string($mysqli,$_POST['Password']); 
       
-      $sql = "SELECT id_o FROM Owner WHERE email_o = '$myemail' AND password_U = '$mypassword'";
+      $sql = "SELECT id_O FROM Owner WHERE email_O = '$myemail' AND password_O = '$mypassword'";
       $result = mysqli_query($mysqli,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
