@@ -3,7 +3,7 @@ include("db_connect.php");
 session_start();
 
 if(!empty($_SESSION['Email'])) {
-      header("location: ../user_views/main.php");
+      header("location: ../owner_homepage/owner_homepage.views.php");
       exit;
 }
 
@@ -12,7 +12,7 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
       $myemail = mysqli_real_escape_string($mysqli,$_POST['Email']);
       $mypassword = mysqli_real_escape_string($mysqli,$_POST['Password']); 
       
-      $sql = "SELECT id_U FROM User WHERE email_U = '$myemail' AND password_U = '$mypassword'";
+      $sql = "SELECT id_o FROM Owner WHERE email_o = '$myemail' AND password_U = '$mypassword'";
       $result = mysqli_query($mysqli,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
@@ -21,13 +21,13 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
       // If result matched $myusername and $mypassword, table row must be 1 row
       if($count == 1) {
          $_SESSION['Email'] = $myemail;
-         $_SESSION['type'] = "user";
-         header("Location: ../user_views/main.php");
+         $_SESSION['type'] = "owner";
+         header("Location: ../owner_homepage/owner_homepage.views.php");
       }else {
             session_destroy();
 
          //Agregar pagina que no estas registrado
-         header("Location: ../login_user/login_user.views.php");
+         header("Location: ../login_owner/login_owner2.views.php");
       }
    }
 ?>

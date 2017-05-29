@@ -1,3 +1,6 @@
+<?php
+    include('../includes/session.php');
+?>
 <!DOCTYPE html>
 <html>
 <title>SHORT+CUT</title>
@@ -27,7 +30,7 @@ body {font-size:16px;}
     <a href="#appointments" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Citas</a>
     <a href="../register_employee/register_employee2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar empleados</a>
     <a href="../register_workplace/register_workplace2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar negocio</a>
-    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
+    <a href="../includes/logout.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
 

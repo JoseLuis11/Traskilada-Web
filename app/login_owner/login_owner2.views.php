@@ -47,7 +47,7 @@ body {font-size:16px;}
   <!-- Login owner -->
   <div class="w3-container" id="login">
     <h1 class="w3-xxlarge w3-text-teal"><b>Inicio de sesión.</b></h1>
-    <form action="../owner_homepage/owner_homepage.views.php" method="post" target="_self">
+    <form action="../includes/owner_homepage.views.php" method="post" target="_self">
       <div class="w3-section">
         <label>Correo electrónico</label>
         <input class="w3-input w3-border" type="email" name="Name" placeholder="Ingresa tu correo electrónico" required>
