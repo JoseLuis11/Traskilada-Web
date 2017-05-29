@@ -25,6 +25,7 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block"> 
+    <h1 class="w3-bar-item w3-large"><?php echo "Hola, ", $login_name; ?></h1/>
     <a href="#employees" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Empleados</a>
     <a href="#workplaces" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Negocios</a>
     <a href="#appointments" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Citas</a>
