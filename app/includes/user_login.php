@@ -7,6 +7,7 @@ if(!empty($_SESSION['Email'])) {
       exit;
 }
 
+if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {     
       // username and password sent from form 
       $myemail = mysqli_real_escape_string($mysqli,$_POST['Email']);
       $mypassword = mysqli_real_escape_string($mysqli,$_POST['Password']); 
@@ -21,12 +22,12 @@ if(!empty($_SESSION['Email'])) {
       if($count == 1) {
          $_SESSION['Email'] = $myemail;
          
-         header("location: ../user_views/main.php");
+         header("Location: ../user_views/main.php");
       }else {
             session_destroy();
-         $error = "Your Login Name or Password is invalid";
+
          //Agregar pagina que no estas registrado
-         header("location: ../login_user/login_user.views.php");
+         header("Location: ../login_user/login_user.views.php");
       }
    }
 ?>
