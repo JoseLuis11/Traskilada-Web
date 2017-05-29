@@ -25,10 +25,10 @@ if($count==1){
 
 if($formLoginType=="user"){
     $result = $mysqli->query("INSERT INTO User (name_U, lastName_U, phoneNumber_U, email_U, password_U) 
-    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formEmail'); ");
+    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formPass'); ");
 }else{
     $result = $mysqli->query("INSERT INTO Owner (name_O, lastName_O, phoneNumber_O, email_O, password_O) 
-    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formEmail'); ");
+    VALUES ('$formName','$formLastName','$formPhone', '$formEmail', '$formPass'); ");
 }
 
 $res = $mysqli->affected_rows;

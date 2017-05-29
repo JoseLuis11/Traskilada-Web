@@ -47,16 +47,16 @@ body {font-size:16px;}
   <!-- Login owner -->
   <div class="w3-container" id="login">
     <h1 class="w3-xxlarge w3-text-teal"><b>Inicio de sesión.</b></h1>
-    <form action="../includes/owner_login.php" method="post" target="_self">
+    <form action="../includes/owner_login.php" target="_self" method="post">
       <div class="w3-section">
         <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="email" name="Email" placeholder="Ingresa tu correo electrónico" required>
+        <input class="w3-input w3-border" type="email" name="Email" placeholder="Ingresa tu dirección de correo electrónico" required>
       </div>
       <div class="w3-section">
         <label>Contraseña</label>
         <input class="w3-input w3-border" type="password" name="Password" placeholder="Ingresa tu contraseña" required>
       </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Ingresar</button>
     </form>
   </div>
 
