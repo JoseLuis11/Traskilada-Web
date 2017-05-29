@@ -22,6 +22,7 @@
             $login_id = $row['id_O'];
         }
    }else{
+       
        if($_SESSION['type'] == "user"){
         session_destroy();
         header("location: ../login_user/login_user.views.php");
