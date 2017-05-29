@@ -4,8 +4,8 @@
    
     if(!empty($_SESSION['Email'])){
             
-        if($_SESSION['type'] == "user"){
-            $user_check = $_SESSION['Email'];
+        $user_check = $_SESSION['Email'];
+        if($_SESSION['type'] == "user"){           
             
             $ses_sql = mysqli_query($mysqli,"SELECT email_U, name_U, id_U FROM User WHERE email_U = '$user_check' ");
 
@@ -22,7 +22,7 @@
             $login_id = $row['id_O'];
         }
    }else{
-       
+
        if($_SESSION['type'] == "user"){
         session_destroy();
         header("location: ../login_user/login_user.views.php");
