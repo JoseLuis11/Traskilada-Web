@@ -50,7 +50,7 @@ body {font-size:16px;}
     <form action="../includes/owner_login.php" method="post" target="_self">
       <div class="w3-section">
         <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="email" name="Name" placeholder="Ingresa tu correo electrónico" required>
+        <input class="w3-input w3-border" type="email" name="Email" placeholder="Ingresa tu correo electrónico" required>
       </div>
       <div class="w3-section">
         <label>Contraseña</label>
