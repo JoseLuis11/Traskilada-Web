@@ -2,7 +2,7 @@
 include("db_connect.php");
 session_start();
 
-if(!empty($_SESSION['Email'])) {
+if(!empty($_SESSION['id_user'])) {
       header("location: ../user_views/main.php");
       exit;
 }
@@ -20,7 +20,7 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
       
       // If result matched $myusername and $mypassword, table row must be 1 row
       if($count == 1) {
-         $_SESSION['Email'] = $myemail;
+         $_SESSION['id_user'] = $myemail;
          
          header("Location: ../user_views/main.php");
       }else {

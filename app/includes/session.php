@@ -2,17 +2,17 @@
     include('db_connect.php');
     session_start();
    
-    if(!empty($_SESSION['Email'])){
+    if(!empty($_SESSION['id_user'])){
 
-        $user_check = $_SESSION['Email'];
+        $user_check = $_SESSION['id_user'];
         
-        $ses_sql = mysqli_query($mysqli,"SELECT email_U FROM User WHERE email_U = '$user_check' ");
+        $ses_sql = mysqli_query($mysqli,"SELECT id_U FROM User WHERE id_U = '$user_check' ");
         
         $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
         
-        $login_session = $row['email_U'];
+        $login_session = $row['id_U'];
         
-        if(!isset($_SESSION['Email'])){
+        if(!isset($_SESSION['id_user'])){
 
             header("location:../login_user/login_user.views.php");
         }
