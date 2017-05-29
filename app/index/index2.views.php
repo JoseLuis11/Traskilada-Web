@@ -1,5 +1,7 @@
 <?php
-  include("../includes/logout.php");
+  session_start();
+  unset($_SESSION['Email']);
+  session_destroy();
 ?>
 <!DOCTYPE html>
 <html>

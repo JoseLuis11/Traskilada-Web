@@ -5,6 +5,7 @@
     if(!empty($_SESSION['Email'])){
             
         $user_check = $_SESSION['Email'];
+        
         if($_SESSION['type'] == "user"){           
             
             $ses_sql = mysqli_query($mysqli,"SELECT email_U, name_U, id_U FROM User WHERE email_U = '$user_check' ");
