@@ -6,14 +6,16 @@
 
         $user_check = $_SESSION['Email'];
         
-        $ses_sql = mysqli_query($mysqli,"SELECT email_U, name_U FROM User WHERE email_U = '$user_check' ");
+        $ses_sql = mysqli_query($mysqli,"SELECT email_U, name_U, id_U FROM User WHERE email_U = '$user_check' ");
         
         $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
         
         $login_session = $row['email_U'];
         
         $login_name = $row['name_U'];
-        
+
+        $login_id = $row['id_U'];
+
         if(!isset($_SESSION['Email'])){
 
             header("location:../login_user/login_user.views.php");
