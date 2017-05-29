@@ -10,7 +10,7 @@
         
         $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
         
-        $login_session = $row['Email'];
+        $login_session = $row['email_U'];
         
         if(!isset($_SESSION['Email'])){
 
