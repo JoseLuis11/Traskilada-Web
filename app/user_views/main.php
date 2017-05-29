@@ -69,12 +69,12 @@ body {font-size:16px;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-teal w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-<h1><?php echo "Bienvenida pinche ", $login_name; ?></h1/>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block"> 
+    <h1><?php echo "Hola, w3-bar-item", $login_name; ?></h1/>
     <a href="../includes/logout.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
