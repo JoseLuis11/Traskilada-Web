@@ -129,7 +129,7 @@ body {font-size:16px;}
 
     <div class="w3-container" id="workplaces">
         <hr>
-        <h1 class="w3-xxlarge w3-text-teal" ><b>Locales.</b></h1>
+        <h1 class="w3-xxlarge w3-text-teal" ><b>Locales</b></h1>
         <div class="w3-responsive w3-card-4">
             <?php include("../includes/show_workplacesToUser.php");?>
         </div>
