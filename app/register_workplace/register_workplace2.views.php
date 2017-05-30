@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php include("../includes/session.php");?>
 <title>SHORT+CUT</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,6 +53,7 @@ body {font-size:16px;}
     <form action="../includes/workplace_register.php" method="post" target="_self">
       <div class="w3-section">
         <label>Nombre</label>
+        <input type="hidden" name="id" value="<?php echo $login_id;?>">
         <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa el nombre del negocio" required>
       </div>
       <div class="w3-section">
