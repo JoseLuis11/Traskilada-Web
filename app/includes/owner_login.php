@@ -29,12 +29,9 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
          header("Location: ../owner_homepage/owner_homepage.views.php");
       }else {
             session_destroy();
-
-         //Agregar pagina que no estas registrado
-         header("Location: ../login_owner/login_owner2.views.php");
+            $error_message = "Email o Password incorrectos";
+         
+            header("Location: ../login_owner/login_owner2.views.php");
       }
-   }else{
-      echo "vale v";
-   }
-   
+   }   
 ?>

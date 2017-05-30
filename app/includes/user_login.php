@@ -25,9 +25,9 @@ if($_POST && !empty($_POST['Email']) && !empty($_POST['Password'])) {
          header("Location: ../user_views/main.php");
       }else {
             session_destroy();
-
-         //Agregar pagina que no estas registrado
-         header("Location: ../login_user/login_user.views.php");
+            $error_message = "Email o Password incorrectos";
+         
+            header("Location: ../login_user/login_user.views.php");
       }
    }
 ?>
