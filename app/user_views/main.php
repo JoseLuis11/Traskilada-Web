@@ -118,7 +118,7 @@ body {font-size:16px;}
         <hr>
         <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
         <div class="w3-responsive w3-card-4">
-            <?php include("../includes/show_workplaces.php");?>
+            <?php include("../includes/show_workplacesToUser.php");?>
         </div>
     </div>
 
