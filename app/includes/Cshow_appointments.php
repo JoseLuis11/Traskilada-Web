@@ -10,7 +10,7 @@ AND a.id_W = w.id_W
 AND a.id_U = u.id_U
 AND o.id_O = ewo.id_O
 AND e.id_E = ewo.id_E
-AND o.id_O = 1
+AND o.id_O = $login_id
 AND o.id_O = w.id_O
 AND ewo.id_W = w.id_W
 group by a.dateTime

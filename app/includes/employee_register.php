@@ -6,31 +6,37 @@ $formName = $_POST['Name'];
 $formLastName = $_POST['LastName'];
 $formPhone = $_POST['Phone'];
 $formEmail = $_POST['Email'];
+$formWorkplace = $_POST['workplace'];
+$formOwnerId = $_POST['id'];
 
-$mysqli = new mysqli($host_db,$user_db,$pass_db,$db_name);
+$result = $mysqli->query("SELECT id_W
+from workplace
+where name_W = '$formWorkplace';");
+$row=$result->fetch_array(MYSQLI_ASSOC);
 
-if($mysqli->connect_error){
-    die("La conexion fallo: " . $mysqli->connect_error);1
-}
-else{
-    echo "Conexion con exito";
-}
+$workplace_id = $row["id_W"];
 
-$result = $mysqli->query("INSERT INTO Users (Name, LastName, PhoneNumber) 
-VALUES ('$formName','$formLastName','$formPhone') ");
+$result = $mysqli->query("INSERT INTO Employee (name_E, lastName_E, phoneNumber_E, email_E) 
+VALUES ('$formName','$formLastName','$formPhone','$formEmail') ");
 
-$formLoginTypeInt=2;
+$employee_Id= $mysqli->insert_id;
+$result = $mysqli->query("INSERT INTO employee_workplace_owner (contractDay, id_E, id_W, id_O)
+     VALUES (NULL, '$employee_Id', '$workplace_id', '$formOwnerId')");
 
 $res = $mysqli->affected_rows;
+
 
 if($res!=1){
         echo "No se ha insertado ningun dato";
 }
 else{
     echo "Fue insertado un dato";
-    $userId= $mysqli->insert_id;
-    $result = $mysqli->query("INSERT INTO Accounts (Email, LoginType, UserId) 
-    VALUES ('$formEmail',$formLoginTypeInt,$userId) ");
+    
+    echo $employee_Id;
+    echo $workplace_id;
+    echo $login_id;
+    
+
 
     mysqli_close($mysqli);
 

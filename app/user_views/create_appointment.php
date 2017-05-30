@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php include("../includes/session.php");?>
 <title>SHORT+CUT</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,39 +61,13 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   <div class="w3-container" id="login">
     <h1 class="w3-xxlarge w3-text-teal"><b>Fecha y hora.</b></h1>
     <form action="" target="_self">
-      <div class="w3-section">
-          <form action="/action_page.php">
-            <label>Fecha y hora: </label>
-            <input type="datetime-local" name="datetime">
-          </form>
-      </div>
-    </form>
-  </div>
-
-  <!-- Choose employee -->
-  <div class="w3-container" id="login">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Barbero/Estilista.</b></h1>
-    <form action="../user_views/main.php" target="_self">
-
-      <div class="w3-section">
-          <form action="/action_page.php">
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-11.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-12.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-13.svg" style="width:20%">
-            </label>
-            <label>
-            <input type="radio" name="Juan"/>
-            <img src="../assets/img/users-14.svg" style="width:20%">
-            </label>
-          </form>
+      <div class="w3-section">  
+        <label>Fecha y hora: </label>
+        <input type="datetime-local" name="datetime">
+        <h1 class="w3-xxlarge w3-text-teal"><b>Barbero/Estilista.</b></h1>
+        <select name="employee" class='w3-theme w3-block w3-padding-large' required >
+        <?php include("../includes/list_employees.php");?>
+        </select>
       </div>
     </form>
   </div>
