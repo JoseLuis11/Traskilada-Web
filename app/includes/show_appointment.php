@@ -3,13 +3,12 @@
                 <tr class="w3-theme">
                     <th>Fecha y Hora</th>
                     <th>Local</th>
-                    <th>Cliente</th>
                     <th>Empleado</th>
                     <th>Servicios</th>
                 </tr>
             </thead>
        <?php 
-            include("Cshow_appointments.php");
+            include("Cshow_appointment.php");
            
             while($row=$result->fetch_array(MYSQLI_ASSOC)){
                 ?>
@@ -17,7 +16,6 @@
                 <tr>
                     <td><?php echo $row["Fecha y hora"];?></td>
                     <td><?php echo $row["Local"];?></td>
-                    <td><?php echo $row["Cliente"];?></td>
                     <td><?php echo $row["Empleado"];?></td>
                     <td><?php echo $row["Servicios"];?></td>
                 </tr>

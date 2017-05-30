@@ -95,11 +95,20 @@ body {font-size:16px;}
   <div class="w3-container" id="showcase">
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
+  
+  <!-- Appointment -->
+    <div class="w3-container">
+    <hr>
+    <h1 class="w3-xxlarge w3-text-teal" id="appointment"><b>Tu cita</b></h1>
+        <div class="w3-responsive w3-card-4">
+            <?php include("../includes/show_workplaces.php");?>      
+        </div>
+    </div>  
 
 <!-- Workplaces -->
     <div class="w3-container">
     <hr>
-    <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Sucursales.</b></h1>
+    <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Crear cita</b></h1>
     <p>Elige la peluquería o barbería a la que quieres ir.</p>
     <div class="w3-left">
         <div class=" w3-container dropdown">

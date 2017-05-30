@@ -20,7 +20,7 @@ body {font-size:16px;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-teal w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
@@ -61,9 +61,9 @@ body {font-size:16px;}
       <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Ingresar</button>
       <p class="w3-section">No estas registrado? <a href="../register_owner/register_owner2.views.php" >Registrate Aquí</a>!</p>
     </form>
-    <?php if (!empty($error_message)) {
-        echo "<p class=\"error\">" . "MESSAGE: ". $error_message . "</p>";} 
-    ?>
+    <?php if (!empty($error_message)) {?>
+      <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error_message; ?></div>
+        <?php }?>
   </div>
 
 <!-- End page content -->
