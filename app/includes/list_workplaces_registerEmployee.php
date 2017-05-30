@@ -1,4 +1,5 @@
 <?php 
+    include("Cshow_workplaces.php");
     
     while($row=$result->fetch_array(MYSQLI_ASSOC)){
         ?>
@@ -6,5 +7,4 @@
 <?php     
     }   
     mysqli_close($mysqli);  
-?>     
-        
+?>

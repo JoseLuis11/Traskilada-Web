@@ -59,7 +59,18 @@ body {font-size:16px;}
     <div class="w3-responsive w3-card-4">
         <?php include("../includes/show_employees.php");?>
     </div>
-</div>
+    <br>
+    <div class="w3-responsive w3-card-4">
+            <form action="../includes/delete_employee.php" method="post" target="_self">
+            <input type="hidden" name="id" value="<?php echo $login_id;?>">
+            <select name="employee" class='w3-theme w3-block w3-padding-large' required >
+          <?php include("../includes/list_employeesToOwner.php");?>
+        </select>
+        </div>
+        <br>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Dar de baja empleado</button>
+            </form>
+    </div>
 
 <!-- Workplaces -->
     <div class="w3-container">
@@ -68,6 +79,17 @@ body {font-size:16px;}
         <div class="w3-responsive w3-card-4">
             <?php include("../includes/show_workplaces.php");?>
         </div>
+        <br>
+        <!-- Workplaces <div class="w3-responsive w3-card-4">
+            <form action="../includes/delete_workplace.php" method="post" target="_self">
+            <input type="hidden" name="id" value="<?php echo $login_id;?>">
+            <select name="workplace" class='w3-theme w3-block w3-padding-large' required >
+          <?php include("../includes/list_workplaces_registerEmployee.php");?>
+        </select>
+        </div>
+        <br>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Dar de baja negocio</button>
+            </form>-->
     </div>
 
 <!-- Appointments -->
@@ -77,6 +99,9 @@ body {font-size:16px;}
         <h1 class="w3-xxlarge w3-text-teal" id="appointments"><b>Citas agendadas.</b></h1>
         <div class="w3-responsive w3-card-4">
             <?php include("../includes/show_appointments.php");?>
+        </div>
+        <div class="w3-responsive w3-card-4">
+        
         </div>
     </div>
     

@@ -10,7 +10,7 @@
        <?php 
             include("Cshow_appointment.php");
            
-            while($row=$result->fetch_array(MYSQLI_ASSOC)){
+            $row=$result->fetch_array(MYSQLI_ASSOC)
                 ?>
                 <tbody>
                 <tr>
@@ -21,7 +21,7 @@
                 </tr>
             </tbody>
        <?php     
-            }   
+               
             mysqli_close($mysqli);  
        ?>     
         </table>

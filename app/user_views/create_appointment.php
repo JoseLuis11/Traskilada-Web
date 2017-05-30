@@ -57,40 +57,31 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     <h1 class="w3-xxxlarge w3-text-teal"><b><?php echo $_GET["name"]?></b></h1>
   </div>
 
+  <?php $workplace = $_GET["name"];?>
   <!-- Login owner -->
   <div class="w3-container" id="login">
     <h1 class="w3-xxlarge w3-text-teal"><b>Fecha y hora.</b></h1>
-    <form action="" target="_self">
+    <form action="../includes/create_appointment.php" method= "POST" target="_self">
       <div class="w3-section">  
         <label>Fecha y hora: </label>
+        <input type="hidden" name="id_U" value="<?php echo $login_id;?>">
+        <input type="hidden" name="workplace" value="<?php echo $workplace;?>">
         <input type="datetime-local" name="datetime">
+        </div>
+        <div class="w3-section">
         <h1 class="w3-xxlarge w3-text-teal"><b>Barbero/Estilista.</b></h1>
         <select name="employee" class='w3-theme w3-block w3-padding-large' required >
         <?php include("../includes/list_employees.php");?>
         </select>
+        </div>
+        <div class="w3-section">
+        <h1 class="w3-xxlarge w3-text-teal"><b>Servicio.</b></h1>
+        <select name="service" class='w3-theme w3-block w3-padding-large' required >
+          <?php include("../includes/list_services.php");?>
+        </select>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Agendar</button>
       </div>
-    </form>
-  </div>
-
-  <div class="w3-container">
-      <hr>
-      <h1 class="w3-xxlarge w3-text-teal" id="services"><b>Servicio.</b></h1>
-      <p>Elige los servicios que desees.</p>
-      <div class="w3-container">
-          <input id="corte" class="w3-check" type="checkbox" checked="checked">
-            <label>Corte</label>
-          <br>
-          <input id="tinte" class="w3-check" type="checkbox">
-          <label>Tinte</label>
-          <br>
-          <input id="manicure" class="w3-check" type="checkbox" disabled>
-        <label>Manicure</label>
-        <br><br>
-      </div> 
-  </div>
-  <div class= "w3-container">
-    <form action="../user_views/app_confirmed.php">
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Agendar</button>  
     </form>
   </div>
   

@@ -3,7 +3,7 @@
                 <tr class="w3-theme">
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Apellidos</th>
+                    
                     <th>Teléfono</th>
                     <th>E-mail</th>
                 </tr>
@@ -17,7 +17,6 @@
                 <tr>
                     <td><?php echo $row["id"];?></td>
                     <td><?php echo $row["name"];?></td>
-                    <td><?php echo $row["lastName"];?></td>
                     <td><?php echo $row["phoneNumber"];?></td>
                     <td><?php echo $row["email"];?></td>
                 </tr>
