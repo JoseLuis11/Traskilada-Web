@@ -74,7 +74,7 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block"> 
-    <h1 class="w3-bar-item w3-large"><?php echo "Hola, ", $login_name; ?></h1/>
+    <h1 class="w3-bar-item w3-large"><b><?php echo "Hola, ", $login_name; ?></b></h1/>
     <a href="../includes/logout.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
@@ -112,6 +112,7 @@ body {font-size:16px;}
             </div>
         </div>
     </div>  
+    </div>
 
 
     <div class="w3-container">
@@ -123,7 +124,7 @@ body {font-size:16px;}
     </div>
 
 <!-- End page content -->
-</div>
+
 
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
