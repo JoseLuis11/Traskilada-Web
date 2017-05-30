@@ -61,9 +61,7 @@ body {font-size:16px;}
       <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Ingresar</button>
       <p class="w3-section">No estas registrado? <a href="../register_owner/register_owner2.views.php" >Registrate Aquí</a>!</p>
     </form>
-    <?php if (!empty($error_message)) {?>
       <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error_message; ?></div>
-        <?php }?>
   </div>
 
 <!-- End page content -->
