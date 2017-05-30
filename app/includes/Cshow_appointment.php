@@ -8,5 +8,6 @@ WHERE s.id_S = sa.id_S
 AND a.id_E = e.id_E
 AND a.id_W = w.id_W
 AND a.id_U = u.id_U
-AND u.id_U = $login_id;");
+AND u.id_U = $login_id
+GROUP BY a.dateTime;");
 ?>
