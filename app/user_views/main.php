@@ -109,21 +109,21 @@ body {font-size:16px;}
     </div>  
 
 <!-- Workplaces -->
-    <div class="w3-container"  id="workplaces_appointmet">
-    <hr>
-    <h1 class="w3-xxlarge w3-text-teal"><b>Crear cita</b></h1>
-    <p>Elige la peluquería o barbería a la que quieres ir.</p>
-    <div class="w3-left">
-        <div class=" w3-container dropdown">
-            <button onclick="myFunction()" class="dropbtn w3-button w3-theme w3-padding-large w3-teal">Elige tu sucursal</button>
-              <div id="myDropdown" class="dropdown-content">
-                <form>
-                    <input type="text" placeholder="Buscar.." id="myInput" onkeyup="filterFunction()">
-                    <?php include("../includes/list_workplaces.php");?>
-                </form>
+    <div class="w3-container"  id="workplaces_appointment">
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal"><b>Crear cita</b></h1>
+        <p>Elige la peluquería o barbería a la que quieres ir.</p>
+        <div class="w3-left">
+            <div class=" w3-container dropdown">
+                <button onclick="myFunction()" class="dropbtn w3-button w3-theme w3-padding-large w3-teal">Elige tu sucursal</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <form>
+                        <input type="text" placeholder="Buscar.." id="myInput" onkeyup="filterFunction()">
+                        <?php include("../includes/list_workplaces.php");?>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>  
+        </div>  
     </div>
 
 
