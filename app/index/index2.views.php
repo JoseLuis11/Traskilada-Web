@@ -78,7 +78,7 @@ body {font-size:16px;}
         <img src="../assets/img/jose.jpg" alt="Jose" style="width:100%">
         <div class="w3-container">
           <h3>José Luis Castro</h3>
-          <p class="w3-opacity">Desarrollador back-end</p>
+          <p class="w3-opacity">Desarrollador back-end y web</p>
           <p>Ingeniería de software, 4to semestre.</p>
         </div>
       </div>
@@ -89,7 +89,7 @@ body {font-size:16px;}
         <img src="../assets/img/felipe.jpg" alt="Felipe" style="width:100%">
         <div class="w3-container">
           <h3>Felipe Ortega</h3>
-          <p class="w3-opacity">Desarrollador web</p>
+          <p class="w3-opacity">Desarrollador back-end y web</p>
           <p>Ingeniería de software, 4to semestre.</p>
         </div>
       </div>
