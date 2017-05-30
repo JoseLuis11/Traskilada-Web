@@ -75,6 +75,9 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block"> 
     <h1 class="w3-bar-item w3-large"><b><?php echo "Hola, ", $login_name; ?></b></h1/>
+    <a href="#appointment" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tu cita</a>
+    <a href="#workplpaces_appointment" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Crear cita</a>
+    <a href="#workplpaces" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Locales</a>
     <a href="../includes/logout.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
@@ -97,18 +100,18 @@ body {font-size:16px;}
   </div>
   
   <!-- Appointment -->
-    <div class="w3-container">
+    <div class="w3-container" id="appointment">
     <hr>
-    <h1 class="w3-xxlarge w3-text-teal" id="appointment"><b>Tu cita</b></h1>
+    <h1 class="w3-xxlarge w3-text-teal" ><b>Tu cita</b></h1>
         <div class="w3-responsive w3-card-4">
             <?php include("../includes/show_appointment.php");?>      
         </div>
     </div>  
 
 <!-- Workplaces -->
-    <div class="w3-container">
+    <div class="w3-container"  id="workplaces_appointmet">
     <hr>
-    <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Crear cita</b></h1>
+    <h1 class="w3-xxlarge w3-text-teal"><b>Crear cita</b></h1>
     <p>Elige la peluquería o barbería a la que quieres ir.</p>
     <div class="w3-left">
         <div class=" w3-container dropdown">
@@ -124,9 +127,9 @@ body {font-size:16px;}
     </div>
 
 
-    <div class="w3-container">
+    <div class="w3-container" id="workplaces">
         <hr>
-        <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
+        <h1 class="w3-xxlarge w3-text-teal" ><b>Locales.</b></h1>
         <div class="w3-responsive w3-card-4">
             <?php include("../includes/show_workplacesToUser.php");?>
         </div>
