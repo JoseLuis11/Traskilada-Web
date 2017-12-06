@@ -1,3 +1,6 @@
+<?php
+    include('../includes/session.php');
+?>
 <!DOCTYPE html>
 <html>
 <title>SHORT+CUT</title>
@@ -22,11 +25,13 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block"> 
+    <h1 class="w3-bar-item w3-large"><?php echo "Hola, ", $login_name; ?></h1/>
     <a href="#employees" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Empleados</a>
     <a href="#workplaces" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Negocios</a>
-    <a href="../register_employee/register_employee2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar empleados</a>
-    <a href="../register_workplace/register_workplace2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar negocio</a>
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
+    <a href="#appointments" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Citas</a>
+    <a href="../register_employee/register_employee2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar empleados</a>
+    <a href="../register_workplace/register_workplace2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registrar negocio</a>
+    <a href="../includes/logout.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cerrar sesión</a>
   </div>
 </nav>
 
@@ -52,77 +57,54 @@ body {font-size:16px;}
     <hr>
     <h1 class="w3-xxlarge w3-text-teal" id="employees"><b>Empleados.</b></h1>
     <div class="w3-responsive w3-card-4">
-        <table class="w3-table w3-striped w3-bordered">
-            <thead>
-                <tr class="w3-theme">
-                    <th>Foto</th>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="../assets/img/users-1.svg" style="width:70px"></td>
-                    <td>9495</td>
-                    <td>Luis</td>
-                    <td>Pérez</td>
-                </tr>
-                <tr>
-                    <td><img src="../assets/img/users-3.svg" style="width:70px"></td>
-                    <td>9496</td>
-                    <td>María</td>
-                    <td>Aparicio</td>
-                </tr>
-                <tr>
-                    <td><img src="../assets/img/users-6.svg" style="width:70px"></td>
-                    <td>9497</td>
-                    <td>Juan</td>
-                    <td>Martínez</td>
-                </tr>
-                <tr>
-                    <td><img src="../assets/img/users-7.svg" style="width:70px"></td>
-                    <td>9498</td>
-                    <td>Jorge</td>
-                    <td>Gutiérrez</td>
-                </tr>
-                <tr>
-                    <td><img src="../assets/img/users-16.svg" style="width:70px"></td>
-                    <td>9499</td>
-                    <td>Luisa</td>
-                    <td>Gonzáles</td>
-                </tr>
-            </tbody>
-        </table>
+        <?php include("../includes/show_employees.php");?>
+    </div>
+    <br>
+    <div class="w3-responsive w3-card-4">
+            <form action="../includes/delete_employee.php" method="post" target="_self">
+            <input type="hidden" name="id" value="<?php echo $login_id;?>">
+            <select name="employee" class='w3-theme w3-block w3-padding-large' required >
+          <?php include("../includes/list_employeesToOwner.php");?>
+        </select>
+        </div>
+        <br>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Dar de baja empleado</button>
+            </form>
     </div>
 
 <!-- Workplaces -->
     <div class="w3-container">
-    <hr>
-    <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
-    <div class="w3-responsive w3-card-4">
-        <table class="w3-table w3-striped w3-bordered">
-            <thead>
-                <tr class="w3-theme">
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1568</td>
-                    <td>Peluquería "Tunéame La Greña"</td>
-                    <td>Blvd. Reforma #800, Bugambilias, 22768</td>
-                </tr>
-                <tr>
-                    <td>5674</td>
-                    <td>Peluquería "Tunéame La Greña: Traskilada"</td>
-                    <td>Paseo Eucaliptos #504, local 5, Plaza Amanecer, 24500</td>
-                </tr>
-            </tbody>
-        </table>
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="workplaces"><b>Negocios.</b></h1>
+        <div class="w3-responsive w3-card-4">
+            <?php include("../includes/show_workplaces.php");?>
+        </div>
+        <br>
+        <!-- Workplaces <div class="w3-responsive w3-card-4">
+            <form action="../includes/delete_workplace.php" method="post" target="_self">
+            <input type="hidden" name="id" value="<?php echo $login_id;?>">
+            <select name="workplace" class='w3-theme w3-block w3-padding-large' required >
+          <?php include("../includes/list_workplaces_registerEmployee.php");?>
+        </select>
+        </div>
+        <br>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Dar de baja negocio</button>
+            </form>-->
     </div>
+
+<!-- Appointments -->
+
+    <div class="w3-container">
+        <hr>
+        <h1 class="w3-xxlarge w3-text-teal" id="appointments"><b>Citas agendadas.</b></h1>
+        <div class="w3-responsive w3-card-4">
+            <?php include("../includes/show_appointments.php");?>
+        </div>
+        <div class="w3-responsive w3-card-4">
+        
+        </div>
+    </div>
+    
 
 <!-- End page content -->
 </div>

@@ -1,11 +1,16 @@
+<?php
+  session_start();
+  unset($_SESSION['Email']);
+  session_destroy();
+?>
 <!DOCTYPE html>
 <html>
 <title>SHORT+CUT</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="../assets/css/index2.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="../assets/css/index2.css">
 <link rel="icon" href="../assets/img/favicon.ico">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
@@ -23,8 +28,8 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../login_owner/login_owner2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
-    <a href="../register_owner/register_owner2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Crear cuenta</a>
+    <a href="../login/login.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
+    <a href="../register_owner/register_owner2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Crear cuenta</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>
@@ -73,7 +78,7 @@ body {font-size:16px;}
         <img src="../assets/img/jose.jpg" alt="Jose" style="width:100%">
         <div class="w3-container">
           <h3>José Luis Castro</h3>
-          <p class="w3-opacity">Desarrollador back-end</p>
+          <p class="w3-opacity">Desarrollador back-end y web</p>
           <p>Ingeniería de software, 4to semestre.</p>
         </div>
       </div>
@@ -84,7 +89,7 @@ body {font-size:16px;}
         <img src="../assets/img/felipe.jpg" alt="Felipe" style="width:100%">
         <div class="w3-container">
           <h3>Felipe Ortega</h3>
-          <p class="w3-opacity">Desarrollador web</p>
+          <p class="w3-opacity">Desarrollador back-end y web</p>
           <p>Ingeniería de software, 4to semestre.</p>
         </div>
       </div>
@@ -130,7 +135,7 @@ body {font-size:16px;}
       </div>
       <div class="w3-section">
         <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
+        <input class="w3-input w3-border" type="email" name="Email" required>
       </div>
       <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Enviar mensaje</button>
     </form>  

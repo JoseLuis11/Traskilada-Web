@@ -22,8 +22,8 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../index/index2.views.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.php#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
   </div>
 </nav>
 
@@ -44,21 +44,16 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
   </div>
 
-  <!-- Login owner -->
-  <div class="w3-container" id="login">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Inicio de sesión.</b></h1>
-    <form action="../owner_homepage/owner_homepage.views.html" target="_self">
-      <div class="w3-section">
-        <label>Usuario</label>
-        <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa tu nombre de usuario" required>
-      </div>
-      <div class="w3-section">
-        <label>Contraseña</label>
-        <input class="w3-input w3-border" type="password" name="Password" placeholder="Ingresa tu contraseña" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
+  <!-- Choose login type -->
+
+  <div class="w3-container" id="logintype">
+    <h1 class="w3-xxlarge w3-text-teal"><b>No estas registrado.</b></h1>
+    <p class="w3-large">Haz click en el botón para registrarte</p>
+    <form action="../login_user/login_user.views.php" target=No estas registrado."_self">
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom w3-hover-black">Regístrate</button>
     </form>
   </div>
+
 
 <!-- End page content -->
 </div>

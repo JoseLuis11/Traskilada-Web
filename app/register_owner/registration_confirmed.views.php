@@ -17,12 +17,15 @@ body {font-size:16px;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-teal w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><img src="../assets/img/logo.png" style="width:70%" onclick="onClick(this)" alt="S H O R T + C U T"></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="../index/index2.views.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="../index/index2.views.php#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+    <a href="../login/login.views.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicia sesión</a>
+    
   </div>
 </nav>
 
@@ -38,41 +41,18 @@ body {font-size:16px;}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
-  <div class="w3-container" id="showcase">
-    <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
-  </div>
+<!-- Header -->
+<div class="w3-container" style="margin-top:20px" id="showcase">
+  <h1 class="w3-jumbo"><b>S H O R T + C U T</b></h1>
+</div>
+<div class="w3-container" style="margin-top:20px">
+  <h1 class="w3-xxlarge w3-text-teal"><b>¡Registro completado! :)</b></h1>
+</div>
 
-  <!-- Register owner -->
-  <div class="w3-container" id="register">
-    <h1 class="w3-xxlarge w3-text-teal"><b>Registro.</b></h1>
-    <p>Ingresa tu información para registrarte.</p>
-    <form action="../login_owner/login_owner2.views.html" target="_self">
-      <div class="w3-section">
-        <label>Nombre</label>
-        <input class="w3-input w3-border" type="text" name="Name" placeholder="Ingresa tu nombre" required>
-      </div>
-      <div class="w3-section">
-        <label>Apellidos</label>
-        <input class="w3-input w3-border" type="text" name="LastName" placeholder="Ingresa tus apellidos" required>
-      </div>
-      <div class="w3-section">
-        <label>Teléfono</label>
-        <input class="w3-input w3-border" type="text" name="Phone" placeholder="Ingresa tu número de teléfono" required>
-      </div>
-      <div class="w3-section">
-        <label>Correo electrónico</label>
-        <input class="w3-input w3-border" type="text" name="Email" placeholder="Ingresa tu dirección de correo electrónico" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Entrar</button>
-    </form>  
-  </div>
+
 
 <!-- End page content -->
 </div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
 // Script to open and close sidebar
