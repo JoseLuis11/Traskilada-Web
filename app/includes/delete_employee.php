@@ -10,9 +10,9 @@
     WHERE concat(name_E,' ', lastName_E) = '$formEmployeeName';");
     $row=$result->fetch_array(MYSQLI_ASSOC);
 
-    $employee_id = $row["id_E"];    
+    $employee_id = $row["id_E"];   
 
-    $result = $mysqli->query("DELETE FROM employee_workplace_owner WHERE id_E = '$employee_id' AND id_O = '$id_O';");
+    $result = $mysqli->query("CALL fire_employee('$employee_id','$id_O');");
     
     header('Location: ../owner_homepage/owner_homepage.views.php');
 

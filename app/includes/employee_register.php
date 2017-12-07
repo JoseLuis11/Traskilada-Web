@@ -21,7 +21,7 @@ VALUES ('$formName','$formLastName','$formPhone','$formEmail') ");
 
 $employee_Id= $mysqli->insert_id;
 $result = $mysqli->query("INSERT INTO employee_workplace_owner (contractDay, id_E, id_W, id_O)
-     VALUES (NULL, '$employee_Id', '$workplace_id', '$formOwnerId')");
+     VALUES (NOW(), '$employee_Id', '$workplace_id', '$formOwnerId')");
 
 $res = $mysqli->affected_rows;
 
