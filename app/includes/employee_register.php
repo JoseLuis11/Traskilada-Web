@@ -16,12 +16,14 @@ $row=$result->fetch_array(MYSQLI_ASSOC);
 
 $workplace_id = $row["id_W"];
 
-$result = $mysqli->query("INSERT INTO Employee (name_E, lastName_E, phoneNumber_E, email_E) 
+$result = $mysqli->query("CALL register_employee('$formName','$formLastName','$formPhone','$formEmail', '$workplace_id', '$formOwnerId')");
+
+/*$result = $mysqli->query("INSERT INTO Employee (name_E, lastName_E, phoneNumber_E, email_E) 
 VALUES ('$formName','$formLastName','$formPhone','$formEmail') ");
 
 $employee_Id= $mysqli->insert_id;
 $result = $mysqli->query("INSERT INTO employee_workplace_owner (contractDay, id_E, id_W, id_O)
-     VALUES (NOW(), '$employee_Id', '$workplace_id', '$formOwnerId')");
+     VALUES (NOW(), '$employee_Id', '$workplace_id', '$formOwnerId')");*/
 
 $res = $mysqli->affected_rows;
 
